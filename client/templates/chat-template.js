@@ -11,47 +11,30 @@ Template.appChat.events({
 		Messages.remove(this._id);
 		return false;
 	},
-	"keyup .txtText": function (event){
-		if(event.keyCode == 13){
-			{
-				if(!!$(".txtText ").val() && !!$(".txtName ").val() )
-				{
-
-	
+	"click .btnAdd": function (event){
+		
 			Messages.insert({
-				name: $(".txtName").val(),
-				text: $(".txtText").val(),
+				Sno: $(".txtSno").val(),
+				Ln: $(".txtLn").val(),
+				Fn: $(".txtFn").val(),
+				Mn: $(".txtMn").val(),
+				C: $(".txtC").val(),
+				Cr: $(".txtCr").val(),
+				Yl: $(".txtYl").val(),
+				Bt: $(".txtBt").val(),
 				createdAt: new Date()
 			});
-			 $(".txtText").val("");
-			 $(".txtText").focus();
-			}
-		}
-		}
-
-
-		return false;
-	},
-	"keyup .txtName": function (event){
-		if(event.keyCode == 13){
-			{
-				if(!!$(".txtText ").val() && !!$(".txtName ").val() )
-				{
-
-	
-			Messages.insert({
-				name: $(".txtName").val(),
-				text: $(".txtText").val(),
-				createdAt: new Date()
-			});
-			 $(".txtText").val("");
-			 $(".txtText").focus();
-			}
-		}
-		}
-
-
-		return false;
+			$(".txtSno").val(""),
+				$(".txtLn").val("");
+				$(".txtFn").val("");
+				$(".txtMn").val("");
+				$(".txtC").val("");
+				$(".txtCr").val("");
+				$(".txtYl").val("");
+				$(".txtBt").val("");	
+				$(".txtSno").focus();
+				return false;
+				
 	}
-
+	
 });

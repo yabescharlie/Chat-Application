@@ -1,12 +1,23 @@
   <template name= "appChat">
-  	 {{#each messages}}
-  	 <div class = "alert alert-info">
-  	 	<b>{{name}}</b> : {{text}} <button class="btn btn-danger btn-small btnDelete">&times;</button>
-  	 </div>
-  	 {{/each}}
-  	 <form class="form">
-  	 <input type = "text" class="form-control txtName" placeholder= "Username"/>
-  	 <input type = "text" class="form-control txtText" placeholder= "Type a Message" />
+ 
 
+  	 <form class="form">
+     <center>
+  	 <input type = "text" class="form-control txtSno" placeholder= "Student Number"/><br />
+  	 <input type = "text" class="form-control txtLn" placeholder= "Last Name" /><br />
+      <input type = "text" class="form-control txtFn" placeholder= "First Name" /><br />
+       <input type = "text" class="form-control txtMn" placeholder= "Middle Name" /><br />
+        <input type = "text" class="form-control txtC" placeholder= "College" /> <br />
+       <input type = "text" class="form-control txtCr" placeholder= "Course" /> <br />
+       <input type = "text" class="form-control txtYl" placeholder= "Year Level" /><br />
+       <input type = "text" class="form-control txtBt" placeholder= "Blood Type" /> <br />
+      <button class="btn btn-default btn-small btnAdd"> ADD</button>
+</center>
   	 </form>
+        {{#each messages}}
+     <div class = "alert alert-info">
+     
+      <br><br>Student Number: {{Sno}}      College: {{C}}    Course and Level: {{Cr}}  {{Yl}}<br><br>Name: {{Ln}}, {{Fn}} {{Mn}}<br><br>Blood Type: {{Bt}}<br> <button class="btn btn-danger btn-small btnDelete" style ="margin-left: 1200px;" > DELETE</button>
+     </div>
+     {{/each}}
   </template>
